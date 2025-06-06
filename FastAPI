@@ -1,1 +1,23 @@
+Uvicorn is a server used to run fastAPI server sp need to install that too
 
+from fastapi import FASTAPI
+app=FASTAPI() #creates the instance of the class or app
+
+@app.get("/hello/{name}") #entry point creation
+async def hello(name):
+    return f"Welcome{name}"
+#types of entry points:
+1.get:read data
+2.post: create data
+3.put: update data
+4.delete:delete data#
+
+lets do something more interesting 
+
+food_items={"indian":["samosa","chatt"],
+            "chinese":["noodles","chilli"]}
+@app.get("/get_items/{cuisine}) #when this is in url we will get data using the dsame names async function
+async def get_items(cuisine:string)#for input data validation
+    return food_items.get(cuisine)
+#adv over flask , for doing validation here we can use enum function so that we tell the user that cuisine is not available easily.+it has inbuilt backend documentation/docs+
+fast+code is compact and lesser bugs
