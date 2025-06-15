@@ -1,0 +1,5 @@
+Python:
+datatypes are **class** and variable of this class is **object** >>class name should bein PascalCase , variable or func name as snake_case.
+Object is an instance of a class> how to create: wagon=Car() like in case of inbuilt class like list and string ,we can have like l=list() #l=[1,2,4] already makes 
+,s=str() # string
+Function vs Method : method is written inside a class ,whereas function is 
