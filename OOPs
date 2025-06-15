@@ -1,5 +1,35 @@
-Python:
+ Python:
 datatypes are **class** and variable of this class is **object** >>class name should bein PascalCase , variable or func name as snake_case.
 Object is an instance of a class> how to create: wagon=Car() like in case of inbuilt class like list and string ,we can have like l=list() #l=[1,2,4] already makes 
 ,s=str() # string
-Function vs Method : method is written inside a class ,whereas function is 
+Function vs Method : method L.append(1)>> method(written in list class) is a special func written inside a class ,whereas function is normal func like len(L)>>function
+
+# 1. Encapsulation: using a class to group data and methods
+class Animal:
+    def __init__(self, name):#constructor
+        self.name = name  # Public attribute #anything is executed automatically asoon as we mke an object/instance of the class like tiger=Animal()
+
+    def speak(self):
+        print(f"{self.name} makes a sound.")
+
+# 2. Inheritance: Dog class inherits from Animal
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
+
+    # 3. Polymorphism: speak method is overridden
+    def speak(self):
+        print(f"{self.name} barks.")
+
+# 4. Abstraction: hiding details using a simple interface
+def animal_sound(animal):
+    animal.speak()
+
+# Main part
+dog = Dog("Buddy", "Golden Retriever")
+animal = Animal("Generic Animal")
+
+animal_sound(animal)  # Calls Animal's speak()
+animal_sound(dog)     # Calls Dog's overridden speak()
+
