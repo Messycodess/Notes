@@ -33,3 +33,13 @@ animal = Animal("Generic Animal")
 animal_sound(animal)  # Calls Animal's speak()
 animal_sound(dog)     # Calls Dog's overridden speak()
 
+__str__ is aso called automatically executed EX:
+(we are making our own datatype like fraction x=4/5 as in python it gets converted to decimal always
+class Fraction:
+   def __init__(self,n,d):
+        self.num=n
+        self.den=d
+   def __str__(self):
+       print("{}/{}".format(self.num,self.den)))
+basically whenever we create an object to this class  fraction like x=Fraction(4,5) ,we just use x lke l=[2,5,x,6,]
+print(l) or print(x) you will get 4/5
